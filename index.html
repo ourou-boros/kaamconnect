@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KaamConnect</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #5b2cff;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    form {
+      display: grid;
+      gap: 12px;
+    }
+    input, select, button {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #5b2cff;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background: #4720cc;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #777;
+    }
+    .note {
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>KaamConnect</h1>
+  <p>Connecting Electricians, Plumbers, Painters & More to Local Clients</p>
+</header>
+
+<section>
+  <h2>Worker Signup</h2>
+  <form id="workerForm">
+    <input type="text" placeholder="Full Name" required />
+    <select required>
+      <option value="">Select Skill</option>
+      <option>Electrician</option>
+      <option>Plumber</option>
+      <option>Painter</option>
+      <option>Carpenter</option>
+      <option>AC Technician</option>
+    </select>
+    <input type="tel" placeholder="Phone Number" required />
+    <input type="email" placeholder="Email Address" required />
+    <input type="text" placeholder="Valid License Number" required />
+    <input type="url" placeholder="Social Media Profile (Facebook / Instagram / LinkedIn)" />
+    <button type="submit">Register as Worker</button>
+  </form>
+  <p class="note">* License verification can be done manually by admin later.</p>
+</section>
+
+<section>
+  <h2>Client Request</h2>
+  <form id="clientForm">
+    <select required>
+      <option value="">Service Needed</option>
+      <option>Electrician</option>
+      <option>Plumber</option>
+      <option>Painter</option>
+      <option>Carpenter</option>
+      <option>AC Technician</option>
+    </select>
+    <input type="tel" placeholder="Your Phone Number" required />
+    <input type="email" placeholder="Your Email" required />
+    <button type="submit">Request Service</button>
+  </form>
+  <p class="note">Workers will contact you directly.</p>
+</section>
+
+<footer>
+  <p>© 2025 KaamConnect | Built for Nepal 🇳🇵</p>
+</footer>
+
+<script>
+  document.getElementById('workerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Worker registered successfully! Admin will verify details.');
+    this.reset();
+  });
+
+  document.getElementById('clientForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Request submitted! Workers will contact you soon.');
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
